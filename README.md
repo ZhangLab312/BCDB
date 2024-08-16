@@ -1,13 +1,11 @@
 # BCDB: A Dual-Branch Network Based on Transformer for Predicting Transcription Factor Binding Sites
-首先需要下载DNABERT，你可以从https://github.com/jerryji1993/DNABERT
-下载，本项目使用的是DNABERT6，即采用kmer=6
-下载完成后将其放入到当前目录下
-然后输入以下命令，将TF原始数据处理成K-mer的形式
+
+First, you need to download DNABERT. You can download it from https://github.com/jerryji1993/DNABERT. This project uses DNABERT6, which employs kmer=6. After downloading, place it in the current directory. Then, enter the following command to process the original TF data into K-mer format.
 ```
 python process_690.py --kmer=6 --file_path=tf_data --output_path=./process_data/6
 ```
-其中file_path为tf原始数据，output_path为预处理好的数据
-最后运行
+Where file_path is the path to the original TF data, and output_path is the path for the preprocessed data. Finally, run the following.
 ```
 train.py
 ```
+You need to change the path to the DNABERT in the train.py file to your download path.
